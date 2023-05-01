@@ -1,0 +1,71 @@
+﻿  正在验证源
+  正在将源远程复制到“1.14.67.47”
+  正在验证体系结构
+  正在验证体系结构
+  正在启动远程生成
+  正在编译源:
+  main.cpp
+E:\GameServer\ServerTest\locker.h(85,21): warning : variable ‘ret’ set but not used [-Wunused-but-set-variable]
+E:\GameServer\ServerTest\locker.h(85,21): warning :    85 |                 int ret = 0;
+E:\GameServer\ServerTest\locker.h(85,21): warning :       |                     ^~~
+E:\GameServer\ServerTest\locker.h(89,9): warning : no return statement in function returning non-void [-Wreturn-type]
+E:\GameServer\ServerTest\locker.h(89,9): warning :    89 |         }
+E:\GameServer\ServerTest\locker.h(89,9): warning :       |         ^
+E:\GameServer\ServerTest\threadPool.h(38,14): warning : ‘threadpool::m_stop’ will be initialized after [-Wreorder]
+E:\GameServer\ServerTest\threadPool.h(38,14): warning :    38 |         bool m_stop;                                    //是否结束进程
+E:\GameServer\ServerTest\threadPool.h(38,14): warning :       |              ^~~~~~
+E:\GameServer\ServerTest\threadPool.h(34,20): warning : ‘pthread_t* threadpool::m_threads’ [-Wreorder]
+E:\GameServer\ServerTest\threadPool.h(34,20): warning :    34 |         pthread_t* m_threads;                   // 线程池数组，大小为   m_thread_number
+E:\GameServer\ServerTest\threadPool.h(34,20): warning :       |                    ^~~~~~~~~
+E:\GameServer\ServerTest\threadPool.h(41,1): warning : when initialized here [-Wreorder]
+E:\GameServer\ServerTest\threadPool.h(73,32): warning : comparison of integer expressions of different signedness: ‘std::__cxx11::list<task*>::size_type’ {aka ‘long unsigned int’} and ‘int’ [-Wsign-compare]
+E:\GameServer\ServerTest\threadPool.h(73,32): warning :    73 |         if (m_workqueue.size() > m_max_requests) {
+E:\GameServer\ServerTest\threadPool.h(73,32): warning :       |             ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+  myepoll.cpp
+E:\GameServer\ServerTest\locker.h(85,21): warning : variable ‘ret’ set but not used [-Wunused-but-set-variable]
+E:\GameServer\ServerTest\locker.h(85,21): warning :    85 |                 int ret = 0;
+E:\GameServer\ServerTest\locker.h(85,21): warning :       |                     ^~~
+E:\GameServer\ServerTest\locker.h(89,9): warning : no return statement in function returning non-void [-Wreturn-type]
+E:\GameServer\ServerTest\locker.h(89,9): warning :    89 |         }
+E:\GameServer\ServerTest\locker.h(89,9): warning :       |         ^
+E:\GameServer\ServerTest\threadPool.h(38,14): warning : ‘threadpool::m_stop’ will be initialized after [-Wreorder]
+E:\GameServer\ServerTest\threadPool.h(38,14): warning :    38 |         bool m_stop;                                    //是否结束进程
+E:\GameServer\ServerTest\threadPool.h(38,14): warning :       |              ^~~~~~
+E:\GameServer\ServerTest\threadPool.h(34,20): warning : ‘pthread_t* threadpool::m_threads’ [-Wreorder]
+E:\GameServer\ServerTest\threadPool.h(34,20): warning :    34 |         pthread_t* m_threads;                   // 线程池数组，大小为   m_thread_number
+E:\GameServer\ServerTest\threadPool.h(34,20): warning :       |                    ^~~~~~~~~
+E:\GameServer\ServerTest\threadPool.h(41,1): warning : when initialized here [-Wreorder]
+E:\GameServer\ServerTest\threadPool.h(73,32): warning : comparison of integer expressions of different signedness: ‘std::__cxx11::list<task*>::size_type’ {aka ‘long unsigned int’} and ‘int’ [-Wsign-compare]
+E:\GameServer\ServerTest\threadPool.h(73,32): warning :    73 |         if (m_workqueue.size() > m_max_requests) {
+E:\GameServer\ServerTest\threadPool.h(73,32): warning :       |             ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+E:\GameServer\ServerTest\myepoll.cpp(18,34): warning : conversion from ‘int’ to ‘uint16_t’ {aka ‘short unsigned int’} may change value [-Wconversion]
+E:\GameServer\ServerTest\myepoll.cpp(18,34): warning :    18 |         seraddr.sin_port = htons(port);
+E:\GameServer\ServerTest\myepoll.cpp(18,34): warning :       |                                  ^~~~
+E:\GameServer\ServerTest\myepoll.cpp(109,22): warning : unused variable ‘msg’ [-Wunused-variable]
+E:\GameServer\ServerTest\myepoll.cpp(109,22): warning :   109 |                 char msg[Size];
+E:\GameServer\ServerTest\myepoll.cpp(109,22): warning :       |                      ^~~
+E:\GameServer\ServerTest\myepoll.cpp(119,23): warning : conversion from ‘ssize_t’ {aka ‘long int’} to ‘int’ may change value [-Wconversion]
+E:\GameServer\ServerTest\myepoll.cpp(119,23): warning :   119 |         bufflen = read(fd, buff, Size);
+E:\GameServer\ServerTest\myepoll.cpp(119,23): warning :       |                   ~~~~^~~~~~~~~~~~~~~~
+E:\GameServer\ServerTest\myepoll.cpp(152,27): warning : conversion from ‘ssize_t’ {aka ‘long int’} to ‘int’ may change value [-Wconversion]
+E:\GameServer\ServerTest\myepoll.cpp(152,27): warning :   152 |         int nwrite = write(fd, buff, bufflen);
+E:\GameServer\ServerTest\myepoll.cpp(152,27): warning :       |                      ~~~~~^~~~~~~~~~~~~~~~~~~
+E:\GameServer\ServerTest\myepoll.cpp(163,22): warning : unused variable ‘msg’ [-Wunused-variable]
+E:\GameServer\ServerTest\myepoll.cpp(163,22): warning :   163 |                 char msg[Size];
+E:\GameServer\ServerTest\myepoll.cpp(163,22): warning :       |                      ^~~
+  正在链接对象
+/usr/bin/ld : error : /home/ubuntu/projects/ServerTest/obj/x64/Debug/myepoll.o: in function `threadpool::threadpool(int, int)':
+E:\GameServer\ServerTest\threadPool.h(41): error : multiple definition of `threadpool::threadpool(int, int)'; /home/ubuntu/projects/ServerTest/obj/x64/Debug/main.o:/home/ubuntu/projects/ServerTest/threadPool.h:41: first defined here
+/usr/bin/ld : error : /home/ubuntu/projects/ServerTest/obj/x64/Debug/myepoll.o: in function `threadpool::worker(void*)':
+E:\GameServer\ServerTest\threadPool.h(84): error : multiple definition of `threadpool::worker(void*)'; /home/ubuntu/projects/ServerTest/obj/x64/Debug/main.o:/home/ubuntu/projects/ServerTest/threadPool.h:84: first defined here
+/usr/bin/ld : error : /home/ubuntu/projects/ServerTest/obj/x64/Debug/myepoll.o: in function `threadpool::threadpool(int, int)':
+E:\GameServer\ServerTest\threadPool.h(41): error : multiple definition of `threadpool::threadpool(int, int)'; /home/ubuntu/projects/ServerTest/obj/x64/Debug/main.o:/home/ubuntu/projects/ServerTest/threadPool.h:41: first defined here
+/usr/bin/ld : error : /home/ubuntu/projects/ServerTest/obj/x64/Debug/myepoll.o: in function `threadpool::~threadpool()':
+E:\GameServer\ServerTest\threadPool.h(65): error : multiple definition of `threadpool::~threadpool()'; /home/ubuntu/projects/ServerTest/obj/x64/Debug/main.o:/home/ubuntu/projects/ServerTest/threadPool.h:65: first defined here
+/usr/bin/ld : error : /home/ubuntu/projects/ServerTest/obj/x64/Debug/myepoll.o: in function `threadpool::~threadpool()':
+E:\GameServer\ServerTest\threadPool.h(65): error : multiple definition of `threadpool::~threadpool()'; /home/ubuntu/projects/ServerTest/obj/x64/Debug/main.o:/home/ubuntu/projects/ServerTest/threadPool.h:65: first defined here
+/usr/bin/ld : error : /home/ubuntu/projects/ServerTest/obj/x64/Debug/myepoll.o: in function `threadpool::append(void (*)(void*), void*)':
+E:\GameServer\ServerTest\threadPool.h(70): error : multiple definition of `threadpool::append(void (*)(void*), void*)'; /home/ubuntu/projects/ServerTest/obj/x64/Debug/main.o:/home/ubuntu/projects/ServerTest/threadPool.h:70: first defined here
+/usr/bin/ld : error : /home/ubuntu/projects/ServerTest/obj/x64/Debug/myepoll.o: in function `threadpool::run()':
+E:\GameServer\ServerTest\threadPool.h(90): error : multiple definition of `threadpool::run()'; /home/ubuntu/projects/ServerTest/obj/x64/Debug/main.o:/home/ubuntu/projects/ServerTest/threadPool.h:90: first defined here
+collect2 : error : ld returned 1 exit status
