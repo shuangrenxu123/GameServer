@@ -1,2 +1,2 @@
 # GameServer
-一个CPP利用epoll+线程池实现的多线程简单服务器
+一个CPP利用epoll 实现的单线程Reactor模型服务器

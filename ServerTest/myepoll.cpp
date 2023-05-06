@@ -75,7 +75,6 @@ void MyEpoll::mod_event(int fd, int state)
 	ev.data.fd = fd;
 	epoll_ctl(epollfd, EPOLL_CTL_MOD, fd, &ev);
 }
-
 void MyEpoll::handle_events(epoll_event* events, int num, char* buff, int& bufflen)
 {
 	int fd;
@@ -93,7 +92,6 @@ void MyEpoll::handle_events(epoll_event* events, int num, char* buff, int& buffl
 			close(fd);
 	}
 }
-
 bool MyEpoll::handle_accept()
 {
 	int clientfd;
@@ -113,7 +111,6 @@ bool MyEpoll::handle_accept()
 		return true;
 	}
 }
-
 bool MyEpoll::do_read(int fd, char* buff, int& bufflen)
 {
 	bufflen = read(fd, buff, Size);
@@ -146,7 +143,6 @@ bool MyEpoll::do_read(int fd, char* buff, int& bufflen)
 	}
 	return true;
 }
-
 bool MyEpoll::do_write(int fd, char* buff, int& bufflen)
 {
 	int nwrite = write(fd, buff, bufflen);

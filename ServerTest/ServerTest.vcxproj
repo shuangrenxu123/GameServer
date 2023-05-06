@@ -75,13 +75,22 @@
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros" />
   <ItemGroup>
+    <ClCompile Include="epoll_demultiplexer.cpp" />
+    <ClCompile Include="ListenHandler.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="myepoll.cpp" />
+    <ClCompile Include="reactor.cpp" />
+    <ClCompile Include="reactor_impl.cpp" />
+    <ClCompile Include="socketHandler.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="locker.h" />
-    <ClInclude Include="threadPool.h" />
-    <ClInclude Include="myepoll.h" />
+    <ClInclude Include="epoll_demultiplexer.h" />
+    <ClInclude Include="event.h" />
+    <ClInclude Include="EventHandler.h" />
+    <ClInclude Include="event_demultiplexer.h" />
+    <ClInclude Include="ListenHandler.h" />
+    <ClInclude Include="reactor.h" />
+    <ClInclude Include="reactor_impl.h" />
+    <ClInclude Include="socketHandler.h" />
   </ItemGroup>
   <ItemDefinitionGroup />
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

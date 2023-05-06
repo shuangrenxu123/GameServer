@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="ListenHandler.cpp">
+      <Filter>Event</Filter>
+    </ClCompile>
+    <ClCompile Include="socketHandler.cpp">
+      <Filter>Event</Filter>
+    </ClCompile>
+    <ClCompile Include="reactor_impl.cpp" />
+    <ClCompile Include="epoll_demultiplexer.cpp" />
+    <ClCompile Include="reactor.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="EventHandler.h">
+      <Filter>Event</Filter>
+    </ClInclude>
+    <ClInclude Include="ListenHandler.h">
+      <Filter>Event</Filter>
+    </ClInclude>
+    <ClInclude Include="socketHandler.h">
+      <Filter>Event</Filter>
+    </ClInclude>
+    <ClInclude Include="reactor.h" />
+    <ClInclude Include="event.h" />
+    <ClInclude Include="reactor_impl.h" />
+    <ClInclude Include="event_demultiplexer.h" />
+    <ClInclude Include="epoll_demultiplexer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Event">
+      <UniqueIdentifier>{a9801636-19af-484c-a1cb-6e8e333f5aba}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
